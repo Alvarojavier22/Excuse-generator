@@ -11,27 +11,29 @@ window.onload = () => {
 };
 
 let generateExcuse = () => {
-  let pronoun = ["Mi", "El"];
-  let subject = ["perro", "gato", "loro", "chofer"];
-  let action = ["comió", "rompió", "quebró"];
-  let possesion = ["la tarea", "el auto", "un zapato"];
-  let where = ["en mi casa", "en la calle", "en el patio"];
+  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before the class",
+    "right on time",
+    "when I finished",
+    "during my lunch",
+    "while I was praying"
+  ];
 
-  let pronounIndex = Math.floor(Math.random() * pronoun.length);
-  let subjectIndex = Math.floor(Math.random() * subject.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let possesionIndex = Math.floor(Math.random() * possesion.length);
-  let whereIndex = Math.floor(Math.random() * where.length);
+  let pronounIndex = Math.floor(Math.random() * who.length);
+  let subjectIndex = Math.floor(Math.random() * action.length);
+  let actionIndex = Math.floor(Math.random() * what.length);
+  let possesionIndex = Math.floor(Math.random() * when.length);
 
   return (
-    pronoun[pronounIndex] +
+    who[pronounIndex] +
     " " +
-    subject[subjectIndex] +
+    action[subjectIndex] +
     " " +
-    action[actionIndex] +
+    what[actionIndex] +
     " " +
-    possesion[possesionIndex] +
-    " " +
-    where[whereIndex]
+    when[possesionIndex]
   );
 };
